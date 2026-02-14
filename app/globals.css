@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 340 60% 97%;
+    --foreground: 340 30% 20%;
+    --card: 340 50% 99%;
+    --card-foreground: 340 30% 18%;
+    --popover: 340 50% 99%;
+    --popover-foreground: 340 30% 18%;
+    --primary: 340 75% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 50% 92%;
+    --secondary-foreground: 340 30% 25%;
+    --muted: 340 30% 94%;
+    --muted-foreground: 340 15% 46%;
+    --accent: 350 85% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 30% 88%;
+    --input: 340 30% 88%;
+    --ring: 340 75% 58%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ---- Floating hearts: rise continuously from bottom to top ---- */
+@keyframes rise {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+/* ---- Subtle horizontal sway while rising ---- */
+@keyframes sway {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(15px);
+  }
+  75% {
+    transform: translateX(-15px);
+  }
+}
+
+/* ---- Pulse animations ---- */
+@keyframes pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.25);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.15);
+  }
+  56% {
+    transform: scale(1);
+  }
+}
+
+/* ---- Celebration ---- */
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) scale(0);
+    opacity: 1;
+  }
+  10% {
+    transform: translateY(0) rotate(72deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg) scale(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes celebrate-heart {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.5) rotate(180deg) translateY(-60px);
+  }
+  100% {
+    transform: scale(2.5) rotate(360deg) translateY(-250px);
+    opacity: 0;
+  }
+}
+
+/* ---- Entrances ---- */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes drift-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes sway-horizontal {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
