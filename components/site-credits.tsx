@@ -21,19 +21,6 @@ export function SiteCredits() {
             "cursor: pointer",
         ].join(";")
 
-        // Use setTimeout to ensure it logs after other initial noise
-        setTimeout(() => {
-            console.log(
-                "%cDesarrollado por alexxhumilde\n%chttps://guns.lol/alexxhumilde",
-                titleStyle,
-                linkStyle
-            )
-            console.log(
-                "%cRepositorio\n%chttps://github.com/alexxhumilde/san-valentin",
-                titleStyle,
-                linkStyle
-            )
-        }, 1000)
     }, [])
 
     return null
